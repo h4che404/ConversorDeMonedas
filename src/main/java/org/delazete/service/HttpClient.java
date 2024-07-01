@@ -19,7 +19,7 @@ public class HttpClient extends Config {
     public String fetchDataFromApi() throws IOException, InterruptedException {
         java.net.http.HttpClient client = java.net.http.HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(URL + apiKey + "/pair/EUR/ARS")).build();
+                .uri(URI.create(URL + apiKey + "/latest/ARS")).build();
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 

@@ -1,24 +1,19 @@
 package org.delazete;
 
-import org.delazete.config.Config;
-import org.delazete.service.HttpClient;
+import com.google.gson.JsonObject;
+import org.delazete.utils.TransGson;
 
 import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        String confirmacion;
-        Config iniciandoConfig = new Config();
-        iniciandoConfig.inicializandoConfig();
-        HttpClient httpClient = new HttpClient(iniciandoConfig.getApiKey(), iniciandoConfig.getURL());
-        // Lógica para consumir la API
+
         try {
-           confirmacion = httpClient.fetchDataFromApi();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            TransGson transGson = new TransGson();
+            JsonObject jsonData = transGson.TrayendoDatos();
+            System.out.println(jsonData);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        System.out.println(confirmacion);
     }
 }
