@@ -1,7 +1,6 @@
 package org.delazete;
 
-import com.google.gson.JsonObject;
-import org.delazete.utils.TransGson;
+import org.delazete.models.Menu;
 
 import java.io.IOException;
 
@@ -9,9 +8,16 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         try {
-            TransGson transGson = new TransGson();
-            JsonObject jsonData = transGson.TrayendoDatos();
-            System.out.println(jsonData);
+            int menu1;
+            do {
+                do {
+
+                    Menu menu = new Menu();
+                    menu.mostrarMenu();
+                    menu1 = menu.Menu();
+                }while (menu1 < 0 && menu1 > 5);
+
+            } while (menu1 != 4);
         } catch (Exception e) {
             e.printStackTrace();
         }
