@@ -1,7 +1,4 @@
 # ConversorDeMonedas
-Proyecto BackEnd hecho junto con oracle - alura.
-
-# ConversorDeMonedas
 
 [![Licencia](https://img.shields.io/badge/Licencia-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
@@ -19,7 +16,7 @@ Un conversor de monedas simple y eficiente que te permite convertir entre difere
 
 1.  **Clonar el repositorio:**
     ```bash
-    git clone [se quitó una URL no válida]
+    git clone https://github.com/h4che404/ConversorDeMonedas.git
     ```
 
 2.  **Compilar y ejecutar:**
@@ -45,3 +42,4 @@ Un conversor de monedas simple y eficiente que te permite convertir entre difere
 ## Licencia
 
 Este proyecto está licenciado bajo la Licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
+Colaboradores: Proyecto BackEnd hecho junto con oracle - alura.
